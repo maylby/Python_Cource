@@ -27,5 +27,5 @@
 
 list_1 = [1, 5]
 print(list_1)
-list_1.append(8)
+list_1.append(8) # функция 'append' добавляет значение в список
 print(list_1)
