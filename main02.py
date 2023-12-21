@@ -151,20 +151,34 @@
 # d = dict()
 
 # d['q'] = 'qwerty'
-# print(d)
+# print(d) # выдача по запросу "(d)" -> "{'q': 'qwerty'}"
 
 # d['w'] = 'werty'
-# print(d['q'])
+# print(d['q']) # выдача по ключу "d['q']" -> "qwerty"
+# print(d) # # выдача по запросу "(d)", с 2-мя ключами ('q', 'w') -> {'q': 'qwerty', 'w': 'werty'}
 
 # dictionary = {}
 # dictionary = {'up': '↑', 'left': '←', 'down': '↓', 'right': '→'}
-# print(dictionary) # {'up':'↑', 'left':'←', 'down':'↓', 'right':'→'}
-# print(dictionary['left']) # ← типы ключей могут отличаться
-# print(dictionary['up']) # ↑ типы ключей могут отличаться
-# dictionary['left'] = '⇐'
-# print(dictionary['left']) # ⇐
-# print(dictionary['type']) # KeyError: 'type'
-# del dictionary['left'] # удаление элемента
+# # print(dictionary) # {'up':'↑', 'left':'←', 'down':'↓', 'right':'→'}
+# # print(dictionary['left']) # ← типы ключей могут отличаться
+# # print(dictionary['up']) # ↑ типы ключей могут отличаться
+# # dictionary['left'] = '⇐'
+# # print(dictionary['left']) # ⇐
+# # print(dictionary['type']) # KeyError: 'type' (ошибка ключа 'type' не существует)
+# del dictionary['left'] # удаление элемента (функция 'del' и ключ, который хотим удалить)
 
-# for (k,v) in dictionary.items():
-#     print('{}: {}'.format(item, dictionary[item]))
+# # dictionary[89] = 98998 # ключ '89' и значение "98998", соответствующее ключу 
+# # print(dictionary) # {'up': '↑', 'left': '←', 'down': '↓', 'right': '→', 89: 98998} <- добавлено число
+
+# # for item in dictionary: # перебор "словаря" циклом "for"
+#     # print('{}: {}'.format(item, dictionary[item])) # вызов "ключей" и их "значений"
+#     # print(item) # на экран выводятся "ключи"
+
+# print(dictionary.items()) # вывод -> dict_items([('up', '↑'), ('down', '↓'), ('right', '→')])
+# # выдача "словаря" в виде "списка" "кортежей", где указаны "ключ" и его "значение"
+
+# for (k,v) in dictionary.items(): # вызов "ключей" и их "значений" (другая форма)
+#     print(k, v) # вывод столбиком ("ключи" и их "значения")
+#     # up ↑
+#     # down ↓
+#     # right →
