@@ -196,13 +196,39 @@ P.S.
 друг_2 - это Петр, который отгадывает. 
 """
 
-def guick_sort(array):
-    
-    if len(array) <= 1: return array
-    else: pivot = array[0]
+# def guick_sort(array):
 
-    less = [i for i in array[1:] if i <= pivot]
-    greater = [i for i in array[1:] if i > pivot]
-    return guick_sort(less) + [pivot] + guick_sort(greater)
+#     if len(array) <= 1: return array
+#     else: pivot = array[0]
 
-print(guick_sort([10, 5, 2]))
+#     less = [i for i in array[1:] if i <= pivot]
+#     greater = [i for i in array[1:] if i > pivot]
+#     return guick_sort(less) + [pivot] + guick_sort(greater)
+
+# print(guick_sort([10, 5, 2]))
+
+
+""" Пояснение решения """
+"""
+● 1-е повторение рекурсии:
+    ○ array = [10, 5, 2, 3]
+    ○ pivot = 10
+    ○ less = [5, 2, 3]
+    ○ greater = []
+    ○ return quicksort([5, 2, 3]) + [10] + quicksort([])
+
+● 2-е повторение рекурсии:
+    ○ array = [5, 2, 3]
+    ○ pivot = 5
+    ○ less = [2, 3]
+    ○ greater = []
+    ○ return quicksort([2, 3]) + [5] + quicksort([]) 
+    # Важно! Здесь помимо вызова рекурсии добавляется список [10]
+
+● 3-е повторение рекурсии:
+    ○ array = [2, 3]
+    ○ return [2, 3] # Сработал базовый случай рекурсии
+    На этом работа рекурсии завершилась 
+    и итоговый список будет выглядеть таким образом: 
+    [2, 3] + [5] + [10] = [2, 3, 5, 10]
+"""
