@@ -16,3 +16,4 @@ def fib(n):
 list_1 = []
 for i in range(0, n):
     list_1.append(fib(i))
+# print(list_1)
