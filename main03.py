@@ -195,3 +195,14 @@ P.S.
 Обозначим друзей, друг_1 - это Иван, который загадал число, 
 друг_2 - это Петр, который отгадывает. 
 """
+
+def guick_sort(array):
+    
+    if len(array) <= 1: return array
+    else: pivot = array[0]
+
+    less = [i for i in array[1:] if i <= pivot]
+    greater = [i for i in array[1:] if i > pivot]
+    return guick_sort(less) + [pivot] + guick_sort(greater)
+
+print(guick_sort([10, 5, 2]))
