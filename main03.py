@@ -166,7 +166,3 @@ P.S.
 #     list_1.append(fib(i))
 # print(list_1)
 
-
-
-from modul1 import *
-print(list_1)
