@@ -193,9 +193,9 @@ C клавиатуры вводится некий набор чисел,
 Функция filter() применяет указанную функцию к каждому элементу итерируемого объекта и
 возвращает итератор с теми объектами, для которых функция вернула 'True'.
 """
-data = [x for x in range(10)]
-res = list(filter(lambda x: x % 2 == 0, data))
-print(res) # [0, 2, 4, 6, 8]
+# data = [x for x in range(10)]
+# res = list(filter(lambda x: x % 2 == 0, data))
+# print(res) # [0, 2, 4, 6, 8]
 
 """
 Все данные, находящиеся внутри внутри 'filter()', 
@@ -207,3 +207,25 @@ lambda x: x % 2 == 0
 Т.е., проводится проверка чётности числа (получение остатка 0 при делении на 2), 
 а итоговые данные преобразуются в список, с помощью функции list().
 """
+
+
+# 00:25:00
+
+data = [15, 65, 9, 36, 175, 30, 0, 5, -10]
+res1 = list(filter(lambda x: x % 5 == 0, data))
+res2 = list(filter(lambda x: x % 10 == 5 or x % 3 == 0, data))
+res3 = list(filter(lambda x: x % 5 == 0 and x % 3 == 0, data))
+print(res1)
+print(res2)
+print(res3)
+
+
+# def filter(f, col): # вид функции 'filter' в программном коде
+#     return [x for x in col if f(x)] # возврат тех 'x' из списка 'col',
+                                      # которые прошли проверку условия f(x) 
+data = [1, 2, 3, 5, 8, 15, 23, 38]
+res = map(int, data) 
+print(data)
+res = filter(lambda x: x % 2 == 0, res) 
+res = list(map(lambda x: (x, x**2), res))
+print(res)
