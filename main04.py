@@ -366,3 +366,15 @@ for line in data:
     print(line)
 data.close() # обязательное закрытие файла в конце
 
+
+''' 3. Режим w '''
+
+colors = ['red', 'green', 'blue']
+data = open('file.txt', 'w')
+data.writelines(colors) # разделителей не будет
+data.close()
+
+'''
+    ● В итоге создаётся текстовый файл с текстом внутри: ‘redbluedreen’.
+    ● В случае перезаписи новые данные записываются, а старые удаляются.
+'''
