@@ -209,23 +209,48 @@ lambda x: x % 2 == 0
 """
 
 
-# 00:25:00
+# # 00:25:00
 
-data = [15, 65, 9, 36, 175, 30, 0, 5, -10]
-res1 = list(filter(lambda x: x % 5 == 0, data))
-res2 = list(filter(lambda x: x % 10 == 5 or x % 3 == 0, data))
-res3 = list(filter(lambda x: x % 5 == 0 and x % 3 == 0, data))
-print(res1)
-print(res2)
-print(res3)
+# data = [15, 65, 9, 36, 175, 30, 0, 5, -10]
+# res1 = list(filter(lambda x: x % 5 == 0, data))
+# res2 = list(filter(lambda x: x % 10 == 5 or x % 3 == 0, data))
+# res3 = list(filter(lambda x: x % 5 == 0 and x % 3 == 0, data))
+# print(res1)
+# print(res2)
+# print(res3)
 
 
-# def filter(f, col): # вид функции 'filter' в программном коде
-#     return [x for x in col if f(x)] # возврат тех 'x' из списка 'col',
-                                      # которые прошли проверку условия f(x) 
-data = [1, 2, 3, 5, 8, 15, 23, 38]
-res = map(int, data) 
-print(data)
-res = filter(lambda x: x % 2 == 0, res) 
-res = list(map(lambda x: (x, x**2), res))
-print(res)
+# # def filter(f, col): # вид функции 'filter' в программном коде
+# #     return [x for x in col if f(x)] # возврат тех 'x' из списка 'col',
+#                                       # которые прошли проверку условия f(x) 
+# data = [1, 2, 3, 5, 8, 15, 23, 38]
+# res = map(int, data) 
+# print(data)
+# res = filter(lambda x: x % 2 == 0, res) 
+# res = list(map(lambda x: (x, x**2), res))
+# print(res)
+
+
+
+# 00:26:20
+
+""" Функция zip """
+"""
+Функция zip() применяется к набору итерируемых объектов 
+и возвращает итератор с кортежами из элементов входных данных
+"""
+
+''' Пример: '''
+
+users = ['user1', 'user2', 'user3', 'user4', 'user5']
+ids = [4, 5, 9, 14, 7]
+data = list(zip(users, ids))
+print(data) # [('user1', 4), ('user2', 5), ('user3', 9), ('user4', 14), ('user5', 7)]
+
+''' Функция zip () пробегает по минимальному входящему набору: '''
+
+users = ['user1', 'user2', 'user3', 'user4', 'user5']
+ids = [4, 5, 9, 14, 7]
+salary = [111, 222, 333]
+data = list(zip(users, ids, salary))
+print(data) # [('user1', 4, 111), ('user2', 5, 222), ('user3', 9, 333)]
