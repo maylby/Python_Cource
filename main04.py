@@ -35,13 +35,35 @@
 
 """ Калькулятор """
 
-def calk1(a, b):
-    return a + b
+# def calk1(a, b):
+#     return a + b
 
-def calk2(a, b):
-    return a * b
+# def calk2(a, b):
+#     return a * b
+
+# def math(op, x, y):
+#     print(op(x, y))
+
+# math(calk1, 5, 6)
+# math(calk2, 5, 6)
+
+
+# 00:06:20
+
+""" Анонимные, lambda-функции """
+
+# def calk1(a, b):
+#     return a + b
+
+# def calk2(a, b):
+#     return a * b
 
 def math(op, x, y):
     print(op(x, y))
 
-math(calk2, 5, 6)
+calk1 = lambda a,b: a + b
+calk2 = lambda a,b: a * b
+
+math(calk1, 4, 6)
+math(calk2, 4, 6)
+math(lambda a,b: a / b, 6, 4)
