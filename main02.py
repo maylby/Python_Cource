@@ -467,8 +467,7 @@ print(dictionary[3]) # Такого ключа не существует
 ● NameError(Ошибка имени переменной) 
 '''
 name = 'Ivan'
-print(names) # Переменной 'names' не существует,
-             # следует изменить 'names' на 'name'
+print(name) # переменная 'names' вместо 'name'
 
 
 ''' 
