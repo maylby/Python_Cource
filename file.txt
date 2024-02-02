@@ -1,1 +1,3 @@
-redgreenblue
+surname     name    phone
+Ивановский	Иван    8(000)
+line 3	    line 3	line 3
