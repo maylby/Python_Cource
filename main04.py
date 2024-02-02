@@ -37,42 +37,47 @@
 
 
 
-# 00:04:00
+# # 00:04:00
 
-""" Калькулятор """
+# """ Калькулятор """
 
-def calk1(a, b):
-    return a + b
+# def calk1(a, b):
+#     return a + b
 
-def calk2(a, b):
-    return a * b
+# def calk2(a, b):
+#     return a * b
 
-def math(op, x, y): # 'op' (operation) - переменная, обозначающая функцию, 
-    print(op(x, y)) # 'x', 'y' - переменные, принимающие некие значения
+# def math(op, x, y): # 'op' (operation) - переменная, обозначающая функцию, 
+#     print(op(x, y)) # 'x', 'y' параметры, принимающие задаваемые значения
 
-math(calk1, 5, 6) # 'op' - функция 'calk1' (a + b), при a = x = 5, b = y = 6
-math(calk2, 5, 6) # 'op' - функция 'calk2' (a * b), при a = x = 5, b = y = 6
+# math(calk1, 5, 6) # 'op' - функция 'calk1' (a + b), при a = x = 5, b = y = 6
+# math(calk2, 5, 6) # 'op' - функция 'calk2' (a * b), при a = x = 5, b = y = 6
 
 
 # 00:06:20
 
 """ 
-Анонимные, lambda-функции 
+Анонимные и lambda-функции 
+
+Служат для сокращения кода и компактности записи
 """
 
-def math(op, x, y):
-    print(op(x, y))
+def math(op, x, y): # метод 'math()', 'op' - функция, 'x, y' - переменные
+    print(op(x, y)) # 'print' выводит функцию 'op(x, y)' c двумя переменными (x, y)
+                    # Строки указывают переменные метода 'math()' и выводимый результат
 
-calk1 = lambda a,b: a + b
-calk2 = lambda a,b: a * b
+calk1 = lambda a,b: a + b # Переменная 'calk1' - это lambda-функция (lambda a,b:),
+                          # принимающяя значения (a, b), которые суммируются (a + b)
+calk2 = lambda a,b: a * b # Переменная 'calk2' - это lambda-функция (lambda a,b:),
+                          # принимающяя значения (a, b), которые умножаются (a * b)
 
-math(calk1, 4, 6)
+math(calk1, 4, 6) # вызов метода 'math()', где 'op' - это 'calk1', x = 4, y = 6
 math(calk2, 4, 6)
-math(lambda a,b: a / b, 6, 4)
+math(lambda a,b: a / b, 6, 4) # вызов метода 'math()' с переданой функцией 'lambda' 
 
 
 
-# # # 00:08:30
+# # 00:08:30
 
 # """ 
 # Задача для самостоятельного решения 
